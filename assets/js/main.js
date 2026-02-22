@@ -83,7 +83,7 @@
   // -------------------------
   // Theme
   // -------------------------
-  // Default = dark. Só grava "light" quando usuário alternar.
+  // Default = light. Só grava preferência quando usuário alternar.
   const storedTheme = localStorage.getItem('theme');
   const applyTheme = (theme) => {
     const isLight = theme === 'light';
@@ -100,7 +100,7 @@
     }
   };
 
-  applyTheme(storedTheme || 'dark');
+  applyTheme(storedTheme || 'light');
 
   themeToggle?.addEventListener('click', () => {
     const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
